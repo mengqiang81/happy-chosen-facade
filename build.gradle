@@ -18,7 +18,7 @@ group 'lerss'
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot' 
+apply plugin: 'spring-boot'
 apply plugin: 'docker'
 
 jar {
@@ -42,15 +42,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     //TODO Do not need h2 runtime in product environment.
-    compile("org.jadira.usertype:usertype.core:4.0.0.GA") {
+    compile("org.jadira.usertype:usertype.core:5.0.0.GA") {
         exclude group: 'org.slf4j', module: 'slf4j-log4j12'
     }
     runtime('com.h2database:h2:1.4.190')
-    runtime('org.postgresql:postgresql:9.4-1201-jdbc4')
     compile('org.nofdev:service-host-mvc:1.1.1')
     compile('org.nofdev:service-client-java:1.1.2')
-    compile('ch.qos.logback.contrib:logback-jackson:0.1.5')
-    compile('ch.qos.logback.contrib:logback-json-classic:0.1.5')
     testCompile(
         'org.springframework.boot:spring-boot-starter-test',
         'org.spockframework:spock-core:1.0-groovy-2.4',
