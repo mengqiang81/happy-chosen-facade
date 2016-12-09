@@ -22,7 +22,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'docker'
 
 jar {
-    baseName = 'the-chosen-facade'
+    baseName = 'happy-chosen-facade'
 }
 
 sourceCompatibility = 1.8
